@@ -10,6 +10,15 @@ export class HeroService {
 
     // return HEROES;
     return Promise.resolve(HEROES);
-
   }
+
+
+  getHeroesSlowly() {
+    // return Promise.resolve(HEROES);
+
+    return new Promise<Hero[]>(
+      resolve => setTimeout( () => resolve(HEROES) , 2000)
+    );
+  }
+
 }
