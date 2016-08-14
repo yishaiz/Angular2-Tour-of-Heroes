@@ -2,11 +2,14 @@ import {Component} from '@angular/core';
 import {HeroDetailComponent} from './hero-detail.component';
 import {Hero} from './Hero';
 
-import {heroes} from './hero.service';
+// import {heroes} from './hero.service';
+import { HeroService} from './hero.service';
+
 
 @Component({
   selector: 'my-app',
   directives: [HeroDetailComponent],
+  providers:[HeroService],
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -89,9 +92,14 @@ export class AppComponent {
 
   selectedHero: Hero;
 
-  constructor() {
-    this.heroesFromService = heroes;
+  constructor(private heroService: HeroService){
+    // this.heroesFromService = heroes;
   }
+
+  ngOnInit(){
+    this.heroesFromService = this.heroService.getHeroes();
+  }
+
 
 
   /*
