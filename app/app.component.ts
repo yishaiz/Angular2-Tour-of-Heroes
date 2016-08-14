@@ -68,7 +68,7 @@ import {heroes} from './hero.service';
     <h2>My Heroes</h2>
       <ul class="heroes">
  
-      <li *ngFor="let hero of heroes; trackBy: trackByHeroes" 
+      <li *ngFor="let hero of heroesFromService; trackBy: trackByHeroes" 
         (click)="onSelect(hero)"
         [class.selected]="hero === selectedHero">
 
