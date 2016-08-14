@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {HeroDetailComponent} from './hero-detail.component';
+import {Component, OnInit} from '@angular/core';
+// import {HeroDetailComponent} from './hero-detail.component';
 import {Hero} from './Hero';
 
 // import {heroes} from './hero.service';
@@ -8,7 +8,7 @@ import { HeroService} from './hero.service';
 
 @Component({
   selector: 'my-app',
-  directives: [HeroDetailComponent],
+  // directives: [HeroDetailComponent],
   providers:[HeroService],
   styles: [`
   .selected {
@@ -71,7 +71,7 @@ import { HeroService} from './hero.service';
     <h2>My Heroes</h2>
       <ul class="heroes">
  
-      <li *ngFor="let hero of heroesFromService; trackBy: trackByHeroes" 
+      <li *ngFor="let hero of heroes; trackBy: trackByHeroes" 
         (click)="onSelect(hero)"
         [class.selected]="hero === selectedHero">
 
@@ -85,20 +85,27 @@ import { HeroService} from './hero.service';
 
 `
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'Tour of Heroes';
 
-  heroesFromService: Hero[];
+  heroes: Hero[];
 
   selectedHero: Hero;
 
-  constructor(private heroService: HeroService){
+  constructor(private heroesService: HeroService){
     // this.heroesFromService = heroes;
   }
 
   ngOnInit(){
-    this.heroesFromService = this.heroService.getHeroes();
+    this.getHeroes();
   }
+
+  getHeroes(){
+    this.heroesService.getHeroes().then(
+      heroes => this.heroes = heroes
+    );
+  }
+
 
 
 

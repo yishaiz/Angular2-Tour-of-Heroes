@@ -7,6 +7,9 @@ export class HeroService {
 
   getHeroes() {
     console.log("heroes", HEROES);
-    return HEROES;
+
+    // return HEROES;
+    return Promise.resolve(HEROES);
+
   }
 }
