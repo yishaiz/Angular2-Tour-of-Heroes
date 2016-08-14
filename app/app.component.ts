@@ -52,13 +52,22 @@ import {Hero} from './Hero';
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
+  
+  .heroes li.selected {
+    background-color: #85b0c9 !important;
+    color: white;
+  }
+
 `],
   template: `
     
     <h1>{{title}}</h1>
     <h2>My Heroes</h2>
       <ul class="heroes">
-      <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+      <li *ngFor="let hero of heroes"
+        (click)="onSelect(hero)"
+        [class.selected]="hero === selectedHero">
+
         <span class="badge">{{hero.id}}</span>{{hero.name}}
       </li>
      </ul>
