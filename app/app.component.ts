@@ -64,7 +64,8 @@ import {Hero} from './Hero';
     <h1>{{title}}</h1>
     <h2>My Heroes</h2>
       <ul class="heroes">
-      <li *ngFor="let hero of heroes"
+      <!--<li *ngFor="let hero of heroes; trackBy:hero?.id" -->
+      <li *ngFor="let hero of heroes; trackBy: trackByHeroes" 
         (click)="onSelect(hero)"
         [class.selected]="hero === selectedHero">
 
@@ -116,6 +117,10 @@ export class AppComponent {
   onSelect(hero:Hero) {
     this.selectedHero = hero;
     console.log(this.selectedHero);
+  }
+
+  trackByHeroes(index: number, hero: Hero){
+    return hero.id;
   }
 
 }
