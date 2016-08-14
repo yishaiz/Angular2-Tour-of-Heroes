@@ -1,15 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-// import {HeroDetailComponent} from './hero-detail.component';
-import {Hero} from './Hero';
 
-// import {heroes} from './hero.service';
-import { HeroService} from './hero.service';
 
 
 @Component({
   selector: 'my-app',
   // directives: [HeroDetailComponent],
-  providers:[HeroService],
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -67,78 +62,13 @@ import { HeroService} from './hero.service';
 `],
   template: `
     
-    <h1>{{title}}</h1>
-    <h2>My Heroes</h2>
-      <ul class="heroes">
- 
-      <li *ngFor="let hero of heroes; trackBy: trackByHeroes" 
-        (click)="onSelect(hero)"
-        [class.selected]="hero === selectedHero">
+       
+    <h3>use heroes component</h3>
+     <my-heroes></my-heroes> 
 
-        <span class="badge">{{hero.id}}</span>{{hero.name}}
-      </li>
-     </ul>
-   
-    <div *ngIf="selectedHero">
-      <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-    </div>
 
 `
 })
-export class AppComponent implements OnInit{
-  title = 'Tour of Heroes';
-
-  heroes: Hero[];
-
-  selectedHero: Hero;
-
-  constructor(private heroesService: HeroService){
-    // this.heroesFromService = heroes;
-  }
-
-  ngOnInit(){
-    this.getHeroes();
-  }
-
-  getHeroes(){
-    this.heroesService.getHeroesSlowly().then(
-      heroes => this.heroes = heroes
-    );
-  }
-
-
-
-
-  /*
-   //const
-   heroes:Hero[] = [
-   {id: 11, name: 'Mr. Nice'},
-   {id: 12, name: 'Narco'},
-   {id: 13, name: 'Bombasto'},
-   {id: 14, name: 'Celeritas'},
-   {id: 15, name: 'Magneta'},
-   {id: 16, name: 'RubberMan'},
-   {id: 17, name: 'Dynama'},
-   {id: 18, name: 'Dr IQ'},
-   {id: 19, name: 'Magma'},
-   {id: 20, name: 'Tornado'}
-   ];
-   */
-
-  // public heroes=HEROS;
-
-  hero: Hero = {
-    id: 1,
-    name: 'Windstorm'
-  };
-
-  onSelect(hero: Hero) {
-    this.selectedHero = hero;
-    console.log(this.selectedHero);
-  }
-
-  trackByHeroes(index: number, hero: Hero) {
-    return hero.id;
-  }
+export class AppComponent  {
 
 }
