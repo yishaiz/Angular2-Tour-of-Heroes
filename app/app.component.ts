@@ -62,9 +62,19 @@ import {Component, OnInit} from '@angular/core';
 `],
   template: `
            
-    <h1>title</h1>
-     <my-heroes></my-heroes> 
-
+    <h1>{{title}}</h1>
+    
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      <a routerLink="/hero/13" routerLinkActive="active">Specific Hero</a>
+      <a routerLink="/another" routerLinkActive="active">Another Component</a>
+      <a routerLink="/xxxx" routerLinkActive="active">Not found page</a>
+    </nav>
+    
+    
+     <!--<my-heroes></my-heroes> -->
+<router-outlet></router-outlet>
 `
 })
 export class AppComponent  {
