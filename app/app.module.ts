@@ -1,7 +1,7 @@
 import {NgModule}      from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {HeroesComponent} from './heroes.component';
-import {HeroDetailComponent} from './hero-detail.component';
+import {HeroesComponent} from './Heroes/heroes.component';
+import {HeroDetailComponent} from './Heroes/hero-detail.component';
 
 import {routing, appRoutingProviders} from './app.routing';
 

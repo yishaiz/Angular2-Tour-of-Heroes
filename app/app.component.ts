@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
 
-
 @Component({
   selector: 'my-app',
   // directives: [HeroDetailComponent],
@@ -69,6 +68,9 @@ import {Component, OnInit} from '@angular/core';
       <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
       <a routerLink="/hero/13" routerLinkActive="active">Specific Hero</a>
       <a routerLink="/another" routerLinkActive="active">Another Component</a>
+      <a routerLink="/movies" routerLinkActive="active">Movies</a>
+      <a routerLink="/movies/about" routerLinkActive="active">About Movies</a>
+
       <a routerLink="/xxxx" routerLinkActive="active">Not found page</a>
     </nav>
     
@@ -77,7 +79,7 @@ import {Component, OnInit} from '@angular/core';
 <router-outlet></router-outlet>
 `
 })
-export class AppComponent  {
+export class AppComponent {
   title = 'Tour of Heroes';
 
 }

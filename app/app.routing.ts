@@ -1,13 +1,15 @@
 import {Routes, RouterModule} from '@angular/router';
 
 import {DashboardComponent} from "./dashboard.component";
-import {HeroesComponent} from "./heroes.component";
-import {HeroDetailComponent} from "./hero-detail.component";
+import {HeroesComponent} from "./Heroes/heroes.component";
+import {HeroDetailComponent} from "./Heroes/hero-detail.component";
 import {PageNotFoundComponent} from "./page-not-found.component";
 import {AnotherComponent} from "./another.component";
+import { MoviesList} from "./Movies/movies-list";
+import {AboutMovies} from "./Movies/about-movies";
 
 
-const appRoutes: Routes = [
+const appRoutes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'heroes', component: HeroesComponent},
   {path: 'hero/:id', component: HeroDetailComponent},
@@ -18,6 +20,8 @@ const appRoutes: Routes = [
       name: 'yishai'
     }
   },
+  {path: 'movies', component: MoviesList},
+  {path: ' movies/about', component: AboutMovies},
 
   {path: '**', component: PageNotFoundComponent}
 ];
