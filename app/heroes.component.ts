@@ -67,7 +67,6 @@ import { HeroService} from './hero.service';
 `],
   template: `
     
-    <h1>{{title}}</h1>
     <h2>My Heroes</h2>
       <ul class="heroes">
  
@@ -86,7 +85,6 @@ import { HeroService} from './hero.service';
 `
 })
 export class HeroesComponent implements OnInit{
-  title = 'Tour of Heroes';
 
   heroes: Hero[];
 

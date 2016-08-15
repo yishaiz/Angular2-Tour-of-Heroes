@@ -61,14 +61,13 @@ import {Component, OnInit} from '@angular/core';
 
 `],
   template: `
-    
-       
-    <h3>use heroes component</h3>
+           
+    <h1>title</h1>
      <my-heroes></my-heroes> 
-
 
 `
 })
 export class AppComponent  {
+  title = 'Tour of Heroes';
 
 }
