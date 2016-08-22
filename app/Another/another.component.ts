@@ -1,12 +1,11 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-    selector: 'dashboard',
+  selector: 'dashboard',
 
-    template: `
- 
+  template: `
     <h1>Another Component</h1>
- <h3>name from input : {{name}}  </h3>
+   <h3>name from input : {{name}}  </h3>
 `
 })
 export class AnotherComponent {
@@ -14,7 +13,7 @@ export class AnotherComponent {
   name: string;
   // @Input() title: string;
 
-  constructor (){
+  constructor() {
     console.log(this.name);
   }
 }

@@ -3,7 +3,6 @@ import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  // directives: [HeroDetailComponent],
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -76,10 +75,9 @@ import {Component, OnInit} from '@angular/core';
     
     
      <!--<my-heroes></my-heroes> -->
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 `
 })
 export class AppComponent {
   title = 'Tour of Heroes';
-
 }

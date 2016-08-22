@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector:'about-movies',
-    template:`
+  selector: 'about-movies',
+  template: `
 
 <h2>About Movies</h2>
 <p>
@@ -10,6 +10,6 @@ import {Component} from '@angular/core';
     Bla bla...
 </p>`
 })
-export class AboutMovies{
+export class AboutMovies {
 
 }
