@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector: 'page-not-found',
-    styles: [`
+  selector: 'page-not-found',
+  styles: [`
         h1{
             color:red;
         }
@@ -15,8 +15,8 @@ import {Component} from '@angular/core';
             width:120px;
         }
 `
-    ],
-    template: `
+  ],
+  template: `
  
     <h1>Page not found !</h1>
 

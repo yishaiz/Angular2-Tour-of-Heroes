@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
 @Component({
-    selector:'movies-list',
-    template:`
+  selector: 'movies-list',
+  template: `
 
 <h2>Movies List</h2>
 <ul>
@@ -12,6 +12,6 @@ import {Component} from '@angular/core';
 </ul>
 `
 })
-export class MoviesList{
+export class MoviesList {
 
 }
