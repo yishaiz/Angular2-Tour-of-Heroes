@@ -12,12 +12,18 @@ export class HeroService {
     return Promise.resolve(HEROES);
   }
 
+  getHero(id: number) {
+    return Promise.resolve(
+      HEROES.find(hero => hero.id == id)
+    );
+  }
+
 
   getHeroesSlowly() {
     // return Promise.resolve(HEROES);
 
     return new Promise<Hero[]>(
-      resolve => setTimeout( () => resolve(HEROES) , 2000)
+      resolve => setTimeout(() => resolve(HEROES), 2000)
     );
   }
 

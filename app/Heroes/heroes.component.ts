@@ -3,13 +3,14 @@ import {Component, OnInit} from '@angular/core';
 import {Hero} from './hero';
 
 // import {heroes} from './hero.service';
-import { HeroService} from './hero.service';
+import {HeroService} from './hero.service';
+import {Router} from "@angular/router";
 
 
 @Component({
   selector: 'my-heroes',
   // directives: [HeroDetailComponent],
-  providers:[HeroService],
+  providers: [HeroService],
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -71,34 +72,37 @@ import { HeroService} from './hero.service';
       <ul class="heroes">
  
       <li *ngFor="let hero of heroes; trackBy: trackByHeroes" 
-        (click)="onSelect(hero)"
-        [class.selected]="hero === selectedHero">
+        (click)="onSelect(hero)">
+
+<!--[class.selected]="hero === selectedHero"-->
 
         <span class="badge">{{hero.id}}</span>{{hero.name}}
       </li>
      </ul>
    
-    <div *ngIf="selectedHero">
+  <!--  
+  <div *ngIf="selectedHero">
       <my-hero-detail [hero]="selectedHero"></my-hero-detail>
     </div>
-
+-->
 `
 })
-export class HeroesComponent implements OnInit{
+export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
 
-  selectedHero: Hero;
+  // selectedHero: Hero;
 
-  constructor(private heroesService: HeroService){
+  constructor(private heroesService: HeroService,
+              private router: Router) {
     // this.heroesFromService = heroes;
   }
 
-  ngOnInit(){
+  ngOnInit() {
     this.getHeroes();
   }
 
-  getHeroes(){
+  getHeroes() {
     this.heroesService.getHeroes().then(
       heroes => this.heroes = heroes
     );
@@ -111,8 +115,9 @@ export class HeroesComponent implements OnInit{
   };
 
   onSelect(hero: Hero) {
-    this.selectedHero = hero;
-    console.log(this.selectedHero);
+    // this.selectedHero = hero;
+    // console.log(this.selectedHero);
+    this.router.navigate(['/hero', hero.id]);
   }
 
   trackByHeroes(index: number, hero: Hero) {
