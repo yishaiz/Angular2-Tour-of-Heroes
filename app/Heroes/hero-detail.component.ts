@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Hero} from './hero';
 import {ActivatedRoute, Router} from "@angular/router";
 import {HeroService} from "./hero.service";
@@ -20,7 +20,7 @@ import {HeroService} from "./hero.service";
   </div>
 `
 })
-export class HeroDetailComponent {
+export class HeroDetailComponent implements  OnInit, OnDestroy{
   /* @Input() */
   hero: Hero;
 
@@ -43,5 +43,11 @@ export class HeroDetailComponent {
       }
     );
   }
+
+
+  ngOnDestroy(){
+    this.subscriber.unsubscribe();
+  }
+
 
 }
