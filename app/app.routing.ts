@@ -3,26 +3,30 @@ import {Routes, RouterModule} from '@angular/router';
 import {DashboardComponent} from "./Dashboard/dashboard.component";
 import {AnotherComponent} from "./Another/another.component";
 
-// import {HeroesComponent} from "./Heroes/heroes.component";
-// import {HeroDetailComponent} from "./Heroes/hero-detail.component";
-
-import {MoviesList} from "./Movies/movies-list";
-import {AboutMovies} from "./Movies/about-movies";
 
 import {PageNotFoundComponent} from "./page-not-found.component";
 
-import {heroesRouting} from "./Heroes/heroes.routing";
-import {moviesRouting} from "./Movies/movies.routing";
+import {HeroesComponent} from "./Heroes/heroes.component";
+import {HeroDetailComponent} from "./Heroes/hero-detail.component";
+import {MoviesListComponent} from "./Movies/movies-list";
+import {AboutMoviesComponent} from "./Movies/about-movies";
+/*
+*/
+
+//
+// import {heroesRouting} from "./Heroes/heroes.routing";
+// import {moviesRouting} from "./Movies/movies.routing";
 
 const appRoutes = [
   {path: 'dashboard', component: DashboardComponent},
 
-  // {path: 'heroes', component: HeroesComponent},
-  // {path: 'hero/:id', component: HeroDetailComponent},
-  // ...heroesRouting,
-
+ /* {path: 'heroes', component: HeroesComponent},
+  {path: 'hero/:id', component: HeroDetailComponent},
+  {path: 'movies', component: MoviesListComponent},
+  {path: 'movies/about', component: AboutMoviesComponent},
+  */
   /*
-
+   ...heroesRouting,
    ...moviesRouting,
    ...anotherRouting,
    */
@@ -35,10 +39,7 @@ const appRoutes = [
     }
   },
 
-  {path: 'movies', component: MoviesList},
-  {path: 'movies/about', component: AboutMovies},
-  /* */
-  {path: '**', component: PageNotFoundComponent}
+   {path: '**', component: PageNotFoundComponent}
 ];
 
 export const appRoutingProviders: any[] = [];

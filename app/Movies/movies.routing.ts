@@ -1,12 +1,10 @@
-import {Routes, RouterModule} from '@angular/router';
+  import {Routes, RouterModule} from '@angular/router';
+  import {MoviesListComponent}    from './movies-list';
+  import {AboutMoviesComponent}  from './about-movies';
 
-import {AboutMovies} from "./about-movies";
-import {MoviesList} from "./movies-list";
+  const moviesRoutes: Routes = [
+    {path: 'movies', component: MoviesListComponent},
+    {path: 'movies/about', component: AboutMoviesComponent}
+  ];
 
-const moviesRoutes: Routes = [
-  {path: 'movies', component: MoviesList},
-  {path: 'movies/about', component: AboutMovies},
-];
-
-export const moviesRouting = RouterModule.forChild(moviesRoutes);
-
+  export const moviesRouting = RouterModule.forChild(moviesRoutes);
