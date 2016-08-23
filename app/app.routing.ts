@@ -2,13 +2,17 @@ import {Routes, RouterModule} from '@angular/router';
 
 import {DashboardComponent} from "./Dashboard/dashboard.component";
 import {AnotherComponent} from "./Another/another.component";
+
+/*
+ */
 import { AdminComponent} from "./Admin/admin.component";
+import {  AuthenticatedComponent} from "./Authenticated/authenticated.component";
 
 
 import {PageNotFoundComponent} from "./page-not-found.component";
 
-import {HeroesComponent} from "./Heroes/heroes.component";
 import {HeroDetailComponent} from "./Heroes/hero-detail.component";
+import {HeroesComponent} from "./Heroes/heroes.component";
 import {MoviesListComponent} from "./Movies/movies-list";
 import {AboutMoviesComponent} from "./Movies/about-movies";
 

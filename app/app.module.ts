@@ -8,6 +8,7 @@ import {routing, appRoutingProviders} from './app.routing';
 import { HeroesModule} from './Heroes/heroes.module';
 import { MoviesModule} from './Movies/movies.module';
 import {  AdminModule} from './Admin/admin.module';
+import {   AuthenticatedModule } from './Authenticated/authenticated.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {  AdminModule} from './Admin/admin.module';
     routing,
     HeroesModule,
     MoviesModule,
-    AdminModule
+    AdminModule,
+    AuthenticatedModule
   ],
   declarations: [
     AppComponent
