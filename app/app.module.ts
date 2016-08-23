@@ -7,9 +7,8 @@ import {routing, appRoutingProviders} from './app.routing';
 
 import { HeroesModule} from './Heroes/heroes.module';
 import { MoviesModule} from './Movies/movies.module';
+import {  AdminModule} from './Admin/admin.module';
 
-import {HeroesComponent} from './Heroes/heroes.component';
-// import {HeroDetailComponent} from './Heroes/hero-detail.component';
 
 @NgModule({
   imports: [
@@ -17,14 +16,11 @@ import {HeroesComponent} from './Heroes/heroes.component';
     FormsModule,
     routing,
     HeroesModule,
-    MoviesModule
+    MoviesModule,
+    AdminModule
   ],
   declarations: [
     AppComponent
-    /*,
-     HeroesComponent
-     HeroDetailComponent
-    */
   ],
   providers: [
     appRoutingProviders

@@ -8,3 +8,4 @@ const heroesRoutes: Routes = [
 ];
 
 export const heroesRouting = RouterModule.forChild(heroesRoutes);
+
