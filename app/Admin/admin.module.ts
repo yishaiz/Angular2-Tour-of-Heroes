@@ -5,6 +5,7 @@ import {FormsModule} from "@angular/forms";
 import { AdminComponent} from "./admin.component";
 
 import { adminRouting} from './admin.routing';
+import {AuthGuard} from "../auth-guard.service";
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { adminRouting} from './admin.routing';
     AdminComponent
   ],
   providers: [
-
+    AuthGuard
   ]
 })
 export class AdminModule {
