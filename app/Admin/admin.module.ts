@@ -6,6 +6,7 @@ import { AdminComponent} from "./admin.component";
 
 import { adminRouting} from './admin.routing';
 import {AuthGuard} from "../auth-guard.service";
+import {AuthService} from "../auth.service";
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import {AuthGuard} from "../auth-guard.service";
     AdminComponent
   ],
   providers: [
-    AuthGuard
+    AuthGuard,
+    AuthService
   ]
 })
 export class AdminModule {

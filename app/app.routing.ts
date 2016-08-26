@@ -15,9 +15,12 @@ import {HeroDetailComponent} from "./Heroes/hero-detail.component";
 import {HeroesComponent} from "./Heroes/heroes.component";
 import {MoviesListComponent} from "./Movies/movies-list";
 import {AboutMoviesComponent} from "./Movies/about-movies";
+import {LoginComponent} from './Login/login.component';
+
 
 const appRoutes = [
   {path: 'dashboard', component: DashboardComponent},
+  {path: 'login', component: LoginComponent},
 
  /* {path: 'heroes', component: HeroesComponent},
   {path: 'hero/:id', component: HeroDetailComponent},
