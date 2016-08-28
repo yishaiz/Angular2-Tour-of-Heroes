@@ -6,6 +6,7 @@ import {FormsModule} from "@angular/forms";
 import {HeroesComponent} from "./heroes.component";
 
 import {HeroDetailComponent} from "./hero-detail.component";
+import {HeroDetailCanDeactivateComponent} from "./hero-detail-deactivate.component";
 import {HeroService} from "./hero.service";
 
 import {heroesRouting} from './heroes.routing';
@@ -18,12 +19,13 @@ import {heroesRouting} from './heroes.routing';
   ],
   declarations: [
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroDetailCanDeactivateComponent
   ],
   providers: [
     HeroService
   ]
 })
 export class HeroesModule {
-  
+
 }
