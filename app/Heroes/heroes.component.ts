@@ -1,15 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-// import {HeroDetailComponent} from './hero-detail.component';
 import {Hero} from './hero';
 
-// import {heroes} from './hero.service';
 import {HeroService} from './hero.service';
 import {Router} from "@angular/router";
 
 
 @Component({
   selector: 'my-heroes',
-  // directives: [HeroDetailComponent],
   providers: [HeroService],
   styles: [`
   .selected {
@@ -74,28 +71,18 @@ import {Router} from "@angular/router";
       <li *ngFor="let hero of heroes; trackBy: trackByHeroes" 
         (click)="onSelect(hero)">
 
-<!--[class.selected]="hero === selectedHero"-->
-
         <span class="badge">{{hero.id}}</span>{{hero.name}}
       </li>
      </ul>
    
-  <!--  
-  <div *ngIf="selectedHero">
-      <my-hero-detail [hero]="selectedHero"></my-hero-detail>
-    </div>
--->
 `
 })
 export class HeroesComponent implements OnInit {
 
   heroes: Hero[];
 
-  // selectedHero: Hero;
-
   constructor(private heroesService: HeroService,
               private router: Router) {
-    // this.heroesFromService = heroes;
   }
 
   ngOnInit() {
@@ -115,10 +102,7 @@ export class HeroesComponent implements OnInit {
   };
 
   onSelect(hero: Hero) {
-    // this.selectedHero = hero;
-    // console.log(this.selectedHero);
-    // this.router.navigate(['/hero', hero.id]);
-    this.router.navigate(['/hero-candeactivate', hero.id]);
+    this.router.navigate(['/hero', hero.id]);
   }
 
   trackByHeroes(index: number, hero: Hero) {

@@ -10,8 +10,6 @@ import {MoviesModule} from './Movies/movies.module';
 import {AdminModule} from './Admin/admin.module';
 import {AuthenticatedModule} from './Authenticated/authenticated.module';
 
-import { DialogService }  from './dialog.service';
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -26,8 +24,7 @@ import { DialogService }  from './dialog.service';
     AppComponent
   ],
   providers: [
-    appRoutingProviders,
-    DialogService
+    appRoutingProviders
   ],
   bootstrap: [AppComponent]
 })

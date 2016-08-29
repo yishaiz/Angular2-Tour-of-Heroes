@@ -8,42 +8,24 @@ import {HeroService} from "./hero.service";
   selector: 'my-hero-detail',
   providers: [HeroService],
   styles: [` 
-          button{
-            margin-top: 40px;
-          }
-          .notification{
-            color:green;
-          }
-          
-          .input-name{
-              margin-top:20px;          
-          }
+          button{margin-top: 40px;}
 `],
   template: `
-<h2 class="notification">Can Deactivate sample. Need to save before navigate outside.</h2>
   <div *ngIf="hero">
     <h2>{{hero.name}} details!</h2>
     <div><label>id: </label>{{hero.id}}</div>
     <div>
-      <label>name: {{hero.name}}</label>
-      <br/>
-      <input [(ngModel)]="editName" placeholder="name" class="input-name"/>
+      <label>name: </label>
+      <input [(ngModel)]="hero.name" placeholder="name"/>
     </div>
   </div>
-  
-  <div>
-  <button (click)="save()" class="btn btn-primary">save</button>
-  <button (click)="cancel()" class="btn btn-warning">cancel</button>
-  
-</div>
   
     <button (click) = "returnToHeroesList()">Return to Heroes</button>
     `
 })
-export class HeroDetailCanDeactivateComponent implements OnInit, OnDestroy {
+export class HeroDetailComponentOld implements OnInit, OnDestroy {
   /* @Input() */
   hero: Hero;
-  editName: string;
 
   private subscriber: any;
 
@@ -59,10 +41,7 @@ export class HeroDetailCanDeactivateComponent implements OnInit, OnDestroy {
         // (+) converts string 'id' to a number
 
         this.service.getHero(id).then(
-          hero => {
-            this.hero = hero;
-            this.editName = this.hero.name;
-          }
+          hero => this.hero = hero
         )
       }
     );
@@ -74,19 +53,7 @@ export class HeroDetailCanDeactivateComponent implements OnInit, OnDestroy {
   }
 
 
-  save() {
-    console.log('save');
-    this.hero.name = this.editName;
-    this.returnToHeroesList();
-  }
-
-  cancel() {
-    console.log('cacnel');
-    this.returnToHeroesList();
-  }
-
-
-  returnToHeroesList() {
+  returnToHeroesList(){
     this.router.navigate(['/heroes']);
   }
 
