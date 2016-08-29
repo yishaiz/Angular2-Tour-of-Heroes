@@ -5,11 +5,12 @@ import {FormsModule} from "@angular/forms";
 import {AppComponent}  from './app.component';
 import {routing, appRoutingProviders} from './app.routing';
 
-import { HeroesModule} from './Heroes/heroes.module';
-import { MoviesModule} from './Movies/movies.module';
-import {  AdminModule} from './Admin/admin.module';
-import {   AuthenticatedModule } from './Authenticated/authenticated.module';
+import {HeroesModule} from './Heroes/heroes.module';
+import {MoviesModule} from './Movies/movies.module';
+import {AdminModule} from './Admin/admin.module';
+import {AuthenticatedModule} from './Authenticated/authenticated.module';
 
+import { DialogService }  from './dialog.service';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import {   AuthenticatedModule } from './Authenticated/authenticated.module';
     AppComponent
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    DialogService
   ],
   bootstrap: [AppComponent]
 })
