@@ -6,7 +6,7 @@ import {heroesRouting} from './heroes.routing';
 
 import {HeroesComponent} from "./heroes.component";
 import {HeroDetailComponent} from "./hero-detail.component";
-import {HeroService} from "./hero.service";
+// import {HeroService} from "./hero.service";
 
 
 @NgModule({
@@ -20,7 +20,7 @@ import {HeroService} from "./hero.service";
     HeroDetailComponent
   ],
   providers: [
-    HeroService
+    // HeroService
   ]
 })
 export class HeroesModule {

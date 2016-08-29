@@ -9,6 +9,7 @@ import {HeroesModule} from './Heroes/heroes.module';
 import {MoviesModule} from './Movies/movies.module';
 import {AdminModule} from './Admin/admin.module';
 import {AuthenticatedModule} from './Authenticated/authenticated.module';
+import {HeroService} from "./Heroes/hero.service";
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import {AuthenticatedModule} from './Authenticated/authenticated.module';
     AppComponent
   ],
   providers: [
-    appRoutingProviders
+    appRoutingProviders,
+    HeroService
   ],
   bootstrap: [AppComponent]
 })
