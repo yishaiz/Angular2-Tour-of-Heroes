@@ -10,6 +10,7 @@ import {MoviesModule} from './Movies/movies.module';
 import {AdminModule} from './Admin/admin.module';
 import {AuthenticatedModule} from './Authenticated/authenticated.module';
 import {HeroService} from "./Heroes/hero.service";
+import {PipeModule} from "./Pipes/pipe.module";
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {HeroService} from "./Heroes/hero.service";
     HeroesModule,
     MoviesModule,
     AdminModule,
-    AuthenticatedModule
+    AuthenticatedModule,
+    PipeModule
   ],
   declarations: [
     AppComponent
