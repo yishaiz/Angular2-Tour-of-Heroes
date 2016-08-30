@@ -72,7 +72,7 @@ import {Component, OnInit} from '@angular/core';
       <a routerLink="/movies/about" routerLinkActive="active">About Movies</a>
       <a routerLink="/admin" routerLinkActive="active">Admin</a>
       <a routerLink="/authenticated" routerLinkActive="active">Authenticated</a>
-      <a routerLink="/Pipe-Hero-Birthday" routerLinkActive="active">Pipe - hero-birthday</a>z
+      <a routerLink="/Pipe-Hero-Birthday" routerLinkActive="active">Pipe - hero-birthday</a>
 
       <a routerLink="/heroes-orderby" routerLinkActive="active">Heroes - OrderBy</a>
 

@@ -5,7 +5,7 @@ import {Pipe, PipeTransform} from "@angular/core";
 })
 
 export class OrderByPipe implements PipeTransform {
-  transform(array: Array<any>, args?) {
+  transform(array: Array<any>, args? : any  ) {
 
     console.log('array (before) : ', array);
 
