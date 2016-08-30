@@ -7,8 +7,8 @@ import {HeroService} from "./hero.service";
 @Component({
   selector: 'my-hero-detail',
   providers: [HeroService],
-  moduleId:module.id,
-  styleUrls:['hero-detail.component.css'],
+  moduleId: module.id,
+  styleUrls: ['hero-detail.component.css'],
 
   template: `
 <!--<h2 class="notification">Can Deactivate sample. Need to save before navigate outside.</h2>-->
@@ -29,6 +29,10 @@ import {HeroService} from "./hero.service";
 </div>
   
     <button (click) = "returnToHeroesList()">Return to Heroes</button>
+    
+    <br/>
+    
+    <button (click) = "returnToHeroesListUsingBack()">Return to Heroes <span class="blue">(using history.back)</span></button>
     `
 })
 export class HeroDetailComponent implements OnInit, OnDestroy {
@@ -68,7 +72,7 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
   save() {
     console.log('save');
     this.hero.name = this.editName;
-    this.returnToHeroesList();
+    // this.returnToHeroesList();
   }
 
   cancel() {
@@ -81,5 +85,9 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
     this.router.navigate(['/heroes']);
   }
 
+
+  returnToHeroesListUsingBack() {
+    window.history.back();
+  }
 
 }
