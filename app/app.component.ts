@@ -65,13 +65,16 @@ import {Component, OnInit} from '@angular/core';
     <nav>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
       <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+      
       <a routerLink="/hero/13" routerLinkActive="active">Specific Hero</a>
       <a routerLink="/another" routerLinkActive="active">Another Component</a>
       <a routerLink="/movies" routerLinkActive="active">Movies</a>
       <a routerLink="/movies/about" routerLinkActive="active">About Movies</a>
       <a routerLink="/admin" routerLinkActive="active">Admin</a>
       <a routerLink="/authenticated" routerLinkActive="active">Authenticated</a>
-      <a routerLink="/Pipe-Hero-Birthday" routerLinkActive="active">Pipe - hero-birthday</a>
+      <a routerLink="/Pipe-Hero-Birthday" routerLinkActive="active">Pipe - hero-birthday</a>z
+
+      <a routerLink="/heroes-orderby" routerLinkActive="active">Heroes - OrderBy</a>
 
       <a routerLink="/xxxx" routerLinkActive="active">Not found page</a>
     </nav>

@@ -6,6 +6,7 @@ import {heroesRouting} from './heroes.routing';
 
 import {HeroesComponent} from "./heroes.component";
 import {HeroDetailComponent} from "./hero-detail.component";
+import {HeroesOrderbyComponent} from "./heroes.orderby.component";
 // import {HeroService} from "./hero.service";
 
 
@@ -17,6 +18,7 @@ import {HeroDetailComponent} from "./hero-detail.component";
   ],
   declarations: [
     HeroesComponent,
+    HeroesOrderbyComponent,
     HeroDetailComponent
   ],
   providers: [
