@@ -7,18 +7,9 @@ import {HeroService} from "./hero.service";
 @Component({
   selector: 'my-hero-detail',
   providers: [HeroService],
-  styles: [` 
-          button{
-            margin-top: 40px;
-          }
-          .notification{
-            color:green;
-          }
-          
-          .input-name{
-              margin-top:20px;          
-          }
-`],
+  moduleId:module.id,
+  styleUrls:['hero-detail.component.css'],
+
   template: `
 <!--<h2 class="notification">Can Deactivate sample. Need to save before navigate outside.</h2>-->
   <div *ngIf="hero">
